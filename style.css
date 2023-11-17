@@ -1,0 +1,82 @@
+/* styles/style.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+search-input {
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+search-icon {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+user-options {
+  display: flex;
+}
+
+user-option {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.upcoming-matches {
+  margin-top: 20px;
+}
+
+.match-box {
+  background-color: #b3e0ff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.live-option {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+subscription-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0070f3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}

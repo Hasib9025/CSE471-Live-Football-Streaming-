@@ -1,19 +1,19 @@
 /* styles/style.css */
 
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/img1.jpg') center/cover no-repeat fixed;
+    color: #fff;
+    overflow: hidden; /* Prevent scrollbar due to fixed background */
+  }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7); /* Add transparency for a subtle overlay effect */
 }
 
 header {
@@ -23,60 +23,130 @@ header {
   margin-bottom: 20px;
 }
 
-search-bar {
+.search-bar {
   display: flex;
   align-items: center;
-  background-color: #e6e6e6;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
   border-radius: 5px;
   padding: 8px;
+  width: 60%;
 }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    width: 80%;
+  }
+  
+  .search-icon {
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  
+  .user-options {
+    display: flex;
+  }
+  
+  .user-option {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #dec6c6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .user-option:hover {
+    color: #0070f3;
+  }
+  
+  .upcoming-matches-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .upcoming-matches-table th, .upcoming-matches-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  
+  .match-box {
+    background-color: #0070f3;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .match-info {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .match-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .match-time {
+    color: #fff;
+  }
+  
+  .live-option {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+  }
 
-search-input {
-  border: none;
-  outline: none;
-  width: 200px;
-}
-
-search-icon {
-  margin-left: 8px;
-  cursor: pointer;
-}
-
-user-options {
-  display: flex;
-}
-
-user-option {
-  margin-left: 20px;
-  cursor: pointer;
-}
-
-.upcoming-matches {
-  margin-top: 20px;
-}
-
-.match-box {
-  background-color: #b3e0ff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.live-option {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-subscription-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #0070f3;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-}
+  .league-selection {
+    margin-top: 5px;
+  }
+  
+  .league-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+  }
+  
+  .league-option {
+    padding: 2px;
+    background-color: #0070f3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .league-option:hover {
+    background-color: #0056b3;
+  }
+  
+  .league-option:hover {
+    background-color: #0056b3;
+  }
+  
+  .subscription-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0070f3;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .subscription-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add more styling based on your requirements */
+  

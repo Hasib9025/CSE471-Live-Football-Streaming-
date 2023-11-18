@@ -2,91 +2,80 @@
 import React from 'react';
 import Link from 'next/link';
 
+
 const Home = () => {
   return (
+    
     <div className="container">
       <header>
-        <h1>Welcome to the Football Streaming Platform</h1>
+        
+        <div className="search-bar">
+          <input type="text" className="search-input" placeholder="Search..." />
+          <div className="search-icon">🔍</div>
+        </div>
+        <div className="user-options">
+          <a href="/profile" className="user-option">My Profile</a>
+          <a href="C:\Users\RUHANI\Desktop\football-streaming\src\pages\notification.js" className="user-option">Notification</a>
+          <a href="/settings" className="user-option">Settings</a>
+        </div>
       </header>
 
-      <section className="feature">
-        <h2>Search Filters</h2>
-        {/* Add your search filter components here */}
-      </section>
-
-      <section className="feature">
-        <h2>Subscription Management</h2>
-        {/* Add your subscription management components here */}
-      </section>
-
-      <section className="feature">
+      <div className="upcoming-matches">
         <h2>Upcoming Matches</h2>
-        <ul>
-          <li>Match 1 - Team A vs. Team B - Date and Time</li>
-          <li>Match 2 - Team C vs. Team D - Date and Time</li>
-          {/* Add more upcoming matches as needed */}
-        </ul>
-      </section>
+        <table className="upcoming-matches-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Match</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023-11-20</td>
+              <td>PSG vs FCB</td>
+            </tr>
+            <tr>
+              <td>2023-11-21</td>
+              <td>RMA vs ACM</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
 
-      <section className="feature">
-        <h2>Dark Mode</h2>
-        {/* Add your dark mode toggle component here */}
-      </section>
+      <div className="live-football">
+        <h2>Watch Live Football Match</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/SNXjGysR5CU"
+          title="Live Football Match"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+ 
+   
 
-      <section className="feature">
-        <h2>Like Button</h2>
-        {/* Add your like button component here */}
-      </section>
-      <nav>
-        <a
-          href="https://www.youtube.com/watch?v=c7uUZwWPf_I&list=RDc7uUZwWPf_I&start_radio=1"
-          className="cta-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Go to Live Match Streaming
-        </a>
-      </nav>
-      <style jsx>{`
-        .container {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 20px;
-        }
+      <div className="subscription-button">
+        <Link href="/subscription.html">Subscribe Now</Link>
+      </div>
 
-        header {
-          text-align: center;
-          margin-bottom: 20px;
-        }
 
-        .feature {
-          margin-bottom: 30px;
-        }
 
-        ul {
-          list-style: none;
-          padding: 0;
-        }
 
-        li {
-          margin-bottom: 10px;
-        }
 
-        .cta-button {
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: #0070f3;
-          color: #fff;
-          text-decoration: none;
-          border-radius: 5px;
-          font-weight: bold;
-          transition: background-color 0.3s ease;
-        }
 
-        .cta-button:hover {
-          background-color: #0056b3;
-        }
-      `}</style>
+      <div className="league-selection">
+        <h3>Select League</h3>
+        <div className="league-options">
+          <a href="https://www.google.com/search?q=Laliga+live+match&rlz=1C1CHBF_enBD1066BD1066&oq=Laliga+live+match+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHC
+          AEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIICAYQABgWGB4yCAgHEAAYFhgeMggICBAAGBYYHjIICAkQABgWGB7SAQk4ODAyajBqMTWoAgCwAgA&sourceid=chrome&ie=UTF-8#sie=lg;/g/11khrmf0s3;2;/m/09gqx;mt;fp;1;;;" className="league-option">La Liga</a>
+          <a href="/uefa" className="league-option">UEFA</a>
+          <a href="/european-league" className="league-option">European League</a>
+        </div>
+      </div>
     </div>
   );
 };
